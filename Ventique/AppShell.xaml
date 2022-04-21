@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--xmlns:local="clr-namespace:Ventique.Views"-->
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:local="clr-namespace:Ventique.Views;assembly=Ventique"
+       xmlns:local="clr-namespace:Ventique.Views"
        Title="Ventique"
        x:Class="Ventique.AppShell">
 
@@ -73,7 +72,8 @@
             </Style>
         </ResourceDictionary>
     </Shell.Resources>
-    <FlyoutItem Title="MyAbout" Icon="icon_feed.png">
+
+    <FlyoutItem Title="My Acount" Icon="icon_feed.png">
         <ShellContent Route="WelcomePage" ContentTemplate="{DataTemplate local:WelcomePage}" />
     </FlyoutItem>
 </Shell>

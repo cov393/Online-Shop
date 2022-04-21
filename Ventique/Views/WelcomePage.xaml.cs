@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Ventique
+namespace Ventique.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WelcomePage : ContentPage
@@ -15,11 +15,18 @@ namespace Ventique
         public WelcomePage()
         {
             InitializeComponent();
+
+            
         }
 
-        async void Button_Clicked(object sender, EventArgs e)
+        async void Signup_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new IntroductionPage());
+            await Navigation.PushAsync(new SingUpPage());
+        }
+
+        async  void Login_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LoginPage());
         }
     }
 }

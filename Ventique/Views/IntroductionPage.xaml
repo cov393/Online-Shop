@@ -1,58 +1,76 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--BackgroundImage="https://i.pinimg.com/564x/b9/d3/bb/b9d3bbc38b6a84954471a93c3d9616dd.jpg"-->
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Ventique.IntroductionPage"
-             Padding="0,20,0,0"
-             BackgroundImage="https://i.pinimg.com/564x/b9/d3/bb/b9d3bbc38b6a84954471a93c3d9616dd.jpg">
+             x:Class="Ventique.Views.IntroductionPage"
+             BackgroundColor="White"
+             Title="Introduction Page">
+    
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-        <Label Text="Ventique" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" FontSize="27" FontAttributes="Bold"/>
-        <SearchBar Placeholder="Searc.." FontSize="Body" TextChanged="SearchBar_TextChanged" TextColor="Black" />
-        <ListView x:Name="listView" IsPullToRefreshEnabled="True"  Refreshing="listView_Refreshing" >
-            <ListView.ItemTemplate>
+        <Label x:Name="MyUsername" TextColor="Black"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+        <!--<SearchBar Placeholder="Searc.." FontSize="Body" TextChanged="SearchBar_TextChanged" />-->
+        <Button Text="Refresh" Command="{Binding RefreshList}" BackgroundColor="Black" TextColor="White"/>
+
+        <ListView x:Name="listView" SeparatorColor="Black" BackgroundColor="#EDCEED" ItemsSource="{Binding NewsItem}"
+                  IsGroupingEnabled="True" GroupDisplayBinding="{Binding Name}">
+            <ListView.ItemTemplate >
                 <DataTemplate>
+                    <ImageCell ImageSource="{Binding IteamImage}"
+                        Detail="{Binding IteamStatus}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!--<ListView x:Name="listView" IsPullToRefreshEnabled="True"  Refreshing="listView_Refreshing"
+                  HasUnevenRows="True" >
+            
+            <ListView.ItemTemplate>
+                <DataTemplate >
                     <ViewCell>
                         <ViewCell.ContextActions>
                             <MenuItem Text="Favorite" Clicked="Add_Favorites_Clicked"/>
                             <MenuItem Text="Delete" Clicked="Remove_Item_Clicked"/>
                         </ViewCell.ContextActions>
 
-                        <Grid Padding="5">
+                        <Grid Padding="5" >
                             <Frame HasShadow="True" CornerRadius="20" >
                                 <StackLayout  Orientation="Horizontal">
-                                    <Image WidthRequest="70"  Source="{Binding ImageUrl}"></Image>
-                                    <StackLayout>
-                                        <Label FontSize="Large" 
-                                               VerticalOptions="Center"
-                                               Text="{Binding Name}"/>
-                                        <Label FontSize="Large" 
-                                               VerticalOptions="Center"
-                                               Text="{Binding Name}"/>
-                                    </StackLayout>
+
+                                <ImageButton WidthRequest="70"  Source="{Binding Image}"   Clicked="ImageButton_Clicked"/>
+                                    <Image WidthRequest="70"  Source="{Binding ImageUrl}"/>
+
+                                <StackLayout>
+                                    <Label FontSize="Large"                    
+                                        Text="{Binding Name}"
+                                        TextColor="Black"/>
+                                    <Label FontSize="Small" 
+                                        TextColor="Black"
+                                        VerticalOptions="End"
+                                        Text="{Binding Status}"/>
+                                </StackLayout>
 
                                     <StackLayout  HorizontalOptions="EndAndExpand"  Orientation="Horizontal">
-                                        <RadioButton />
+                                        
 
                                     </StackLayout>
                                 </StackLayout>
+
                             </Frame>
                         </Grid>
-                        <!--<StackLayout Orientation="Horizontal" Padding="4"  >
-                            <Image Source="{Binding ImageUrl}" />
-                            <StackLayout HorizontalOptions="StartAndExpand">
-                              <Label Text="{Binding Name}" TextColor="Black" />
-                              <Label Text="{Binding Status}" TextColor="Black"/>
-                            </StackLayout>
-                            <Button Text="Buy" FontSize="Header"/>
-                            <Button Text="♡ Watch" FontSize="Header"/>
-                        </StackLayout>-->
                     </ViewCell>
-                    <!--<TextCell Text="{Binding Name}"  Detail="{Binding }"/>-->
+                    
+                    
+                    --><!--<ImageCell Text="{Binding Name}"  ImageSource="{Binding ImageUrl}" />--><!--
+                    
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </ListView>
-        <Label Text="This Page is how the app works" TextColor="Black"/>
-        <Button Text="Back" Clicked="Button_Clicked" />
+        </ListView>-->
+        
+        <!--<Label Text="This Page is how the app works"/>-->
+        <Button Text="Back" Clicked="Button_Clicked"/>
+        <Button Text="Add New Product" Clicked="Button_AddProduct_Clicked"/>
+        <Button x:Name="Loguot" Text="Logout" BackgroundColor="Black" TextColor="White" Clicked="Loguot_Clicked"/>
         
     </StackLayout>
+    
+
 </ContentPage>

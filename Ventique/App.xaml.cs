@@ -1,4 +1,6 @@
-﻿using Xamarin.Forms;
+﻿using Ventique.Views;
+using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace Ventique {
     public partial class App : Application
@@ -7,7 +9,15 @@ namespace Ventique {
         public App()
         {
             InitializeComponent();
-            MainPage = new AppShell();
+
+            if (!string.IsNullOrEmpty(Preferences.Get("MyFirebaseRefreshToken", "")))
+            {
+                MainPage = new NavigationPage(new IntroductionPage());
+            }
+            else
+            {
+                MainPage = new NavigationPage(new WelcomePage());
+            }
         }
 
         protected override void OnStart()
