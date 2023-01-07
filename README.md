@@ -24,3 +24,7 @@ Introduction Page contains:
 
 ![image](https://user-images.githubusercontent.com/74015697/211167106-bc244d00-d7a1-4bd1-9b14-bb407be3575d.png)
 
+### Add Product Page
+At this page user can add new products by filling up the tables for 
+
+![image](https://user-images.githubusercontent.com/74015697/211167491-c31edd3b-a0dc-439a-846d-f55713dac52b.png)
