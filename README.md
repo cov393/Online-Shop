@@ -12,22 +12,21 @@ Important features were created for the security of customers as an authenticati
 ![image](https://user-images.githubusercontent.com/74015697/211167079-d7a55858-e5ec-4088-a3ad-aa52bdde9c65.png)
 
 ### Introduction Page
-Introduction Page contains:
+****Introduction Page contains:****
 
-● Refresh function which allow refresh the Introduction Page to check if real time database (online-shop) was updated with new products.
+● **Refresh function** which allow refresh the Introduction Page to check if real time database (online-shop) was updated with new products.
 
-● Add new product - its a new page where users can upload they prodacts and push it to the real time database.
+● **Add new product** - its a new page where users can upload they prodacts and push it to the real time database.
 
-● Logout button will switch user from online mode to offline.
+● **Logout button** will switch user from online mode to offline.
 
-● Back button wil send user back at "before page".
+● **Back button** wil send user back at "before page".
 
 ![image](https://user-images.githubusercontent.com/74015697/211167106-bc244d00-d7a1-4bd1-9b14-bb407be3575d.png)
 
 ### Add Product Page
-At this page user can add new products by filling up the form and send it to database. After compliting the submission user can return to the *Introduction Page* to refresh the page and check for products update
+At this page user can add new products by filling up the form and send it to database. After compliting the submission user can return to the **Introduction Page** to refresh the page and check for products update.
 
 ![image](https://user-images.githubusercontent.com/74015697/211168161-6ea77e73-b57f-4960-87a6-853d674f2561.png)
 
 
-![image](https://user-images.githubusercontent.com/74015697/211167491-c31edd3b-a0dc-439a-846d-f55713dac52b.png)
