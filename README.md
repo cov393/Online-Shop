@@ -1,4 +1,4 @@
-Online Shop
+# Online Shop
 
 The idea of the application is to create an online store selling vintage and handicrafts. Each user can create an account and list their items for sale. Each user can go to the store and view the list of products in order to buy later.
 Important features were created for the security of customers as an authentication method, which used the FireBase Database, which securely stored hashed passwords and a separate list of their items for sale and purchases.
@@ -13,6 +13,10 @@ Important features were created for the security of customers as an authenticati
 
 ### Introduction Page
 Introduction Page contains:
-● Refresh function which allow refresh the Introduction Page to check if real time database (online-shop) was updated with new products
+● Refresh function which allow refresh the Introduction Page to check if real time database (online-shop) was updated with new products.
+● Add new product - its a new page where users can upload they prodacts and push it to the real time database.
+● Logout button will switch user from online mode to offline.
+● Back button wil send user back at "before page".
+
 ![image](https://user-images.githubusercontent.com/74015697/211167106-bc244d00-d7a1-4bd1-9b14-bb407be3575d.png)
 
